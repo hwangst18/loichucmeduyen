@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Yêu Thương 20/10 - Dành Tặng Mẹ (Cô giáo Văn)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #f7cac9, #837894); /* Gradient màu hồng tím */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Cho nội dung bắt đầu từ đỉnh, cho phép cuộn */
+            min-height: 100vh; 
+            margin: 0;
+            padding: 40px 20px; 
+        }
+
+        .card {
+            width: 85%;
+            max-width: 650px;
+            background-color: rgba(255, 255, 255, 0.95); 
+            border: 10px solid;
+            border-image: linear-gradient(45deg, #ff7e5f, #feb47b, #ffbe0b) 1; /* Viền gradient cam vàng */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            transform: scale(0.9);
+            animation: cardPopIn 1.5s ease-out forwards;
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+        }
+
+        @keyframes cardPopIn {
+            0% { transform: scale(0.5) translateY(50px); opacity: 0; }
+            80% { transform: scale(1.05) translateY(-10px); opacity: 1; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .header {
+            font-family: 'Dancing Script', cursive;
+            color: #d62828; 
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
+            to { text-shadow: 0 0 15px rgba(255, 100, 100, 0.7), 0 0 20px rgba(255, 150, 150, 0.5); }
+        }
+
+        .date {
+            color: #4a4a4a;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-style: italic;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+
+        .photo-container {
+            margin: 25px auto;
+            border: 7px solid #ffbe0b; 
+            border-radius: 50%; 
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(255, 190, 11, 0.6);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.1) rotate(5deg); 
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .message {
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.7;
+            text-align: justify;
+            margin: 25px 0;
+            padding: 0 20px;
+        }
+
+        .message p {
+            margin-bottom: 15px;
+        }
+        
+        .message strong {
+            color: #d62828; /* Làm nổi bật các từ khóa Văn học */
+            font-weight: 700;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #d62828;
+            font-weight: bold;
+            border-top: 2px solid #ff7e5f; 
+            padding-top: 20px;
+            text-align: right;
+            padding-right: 20px;
+            letter-spacing: 1px;
+            animation: signatureMove 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes signatureMove {
+            from { transform: translateX(0); }
+            to { transform: translateX(-10px); }
+        }
+
+        /* Hiệu ứng hoa rơi */
+        .flower {
+            position: fixed; 
+            width: 20px;
+            height: 20px;
+            background-color: #f7cac9; 
+            border-radius: 50%;
+            opacity: 0;
+            animation: fall linear infinite;
+            pointer-events: none; 
+            z-index: 0; 
+        }
+
+        .flower:nth-child(2n) { background-color: #ffbe0b; width: 15px; height: 15px; animation-delay: 1s; }
+        .flower:nth-child(3n) { background-color: #feb47b; width: 25px; height: 25px; animation-delay: 2s; }
+        .flower:nth-child(4n) { background-color: #f7cac9; width: 18px; height: 18px; animation-delay: 0.5s; }
+        .flower:nth-child(5n) { background-color: #ffbe0b; width: 22px; height: 22px; animation-delay: 2.5s; }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">💖 Chúc Mừng Ngày Phụ Nữ Việt Nam 💖</div>
+        <div class="date">20 tháng 10 - Gửi Mẹ Yêu Thương (Cô Giáo Văn)</div>
+
+        <div class="photo-container">
+            <img src="me.jpg" alt="Ảnh Mẹ Yêu Dấu" class="photo">
+        </div>
+
+        <div class="message">
+            <p>Gửi u Duyên yêu quý của con và em Dương!</p>
+            <p>Nhân ngày 20/10, con xin gửi tới "Người lái đò" vĩ đại nhất của cuộc đời con, vừa là cô giáo dạy Văn đã truyền cho con tình yêu ngôn từ, vừa là "biên tập viên" khó tính nhất đã chỉnh sửa mọi lỗi sai (từ bài tập đến cách sống) của con.</p>
+            <p>Chúc "cô giáo văn" vĩ đại của gia đình mình luôn:</p>
+            
+            <ul>
+                <li>Trẻ trung, xinh đẹp như nhân vật nữ chính trong những áng văn lãng mạn, không bao giờ bị bi kịch của tuổi tác chạm đến.</li>
+                <li>Sức khỏe dồi dào, không phải lo lắng về cốt truyện cuộc sống, vì con đã lo sắp xếp mọi thứ thật viên mãn rồi!</li>
+                <li>Hạnh phúc ngập tràn, nhận được nhiều hoa, quà, và đặc biệt là không cần phải chấm điểm bất kỳ món quà nào của con!</li>
+            </ul>
+
+            <p>Con rằng dù ngoài kia u có phải phân tích, bình giảng bao nhiêu tác phẩm đi chăng nữa, thì tác phẩm tuyệt vời nhất của u vẫn là con (và em Dương nữa)!</p>
+            <p>Con yêu mẹ - Cô giáo Văn đỉnh nhất vũ trụ!</p>
+        </div>
+
+        <div class="signature">
+            Tấm thân nhỏ bé của mẹ !
+        </div>
+    </div>
+
+    
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const numFlowers = 30; // Số lượng cánh hoa
+            for (let i = 0; i < numFlowers; i++) {
+                let flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.animationDuration = Math.random() * 5 + 5 + 's'; // Thời gian rơi từ 5-10s
+                flower.style.animationDelay = Math.random() * 5 + 's'; // Trễ ngẫu nhiên
+                document.body.appendChild(flower);
+            }
+        });
+    </script>
+
+</body>
+</html>
